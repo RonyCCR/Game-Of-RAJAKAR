@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c01b6spqsd4d"]
+
+[ext_resource type="Script" uid="uid://bq4y85tfxkenl" path="res://Scenes/modi.gd" id="1_a7t41"]
+[ext_resource type="Texture2D" uid="uid://byj5s5dl51jxn" path="res://Game of RAJAKAR/Modi.png" id="1_n3f8h"]
+
+[node name="Modi" type="Area2D" unique_id=222879698]
+collision_layer = 32
+collision_mask = 9
+script = ExtResource("1_a7t41")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1143661455]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_n3f8h")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1004210848]
+scale = Vector2(0.25, 0.25)
+polygon = PackedVector2Array(-84, -244, 8, -264, 60, -256, 120, -228, 196, -144, 228, -104, 228, -24, 204, 8, 236, 24, 248, 60, 212, 124, 160, 180, 128, 188, 88, 228, -8, 264, -92, 260, -148, 224, -188, 168, -212, 104, -232, 52, -252, -28, -232, -64, -200, -60, -188, -124, -164, -176, -140, -204, -112, -200, -104, -232)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

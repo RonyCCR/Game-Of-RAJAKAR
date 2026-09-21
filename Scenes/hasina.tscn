@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bg5x62lgg7dq8"]
+
+[ext_resource type="Texture2D" uid="uid://b210pre8xfvg4" path="res://Game of RAJAKAR/Hasina.png" id="1_58bsc"]
+[ext_resource type="Script" uid="uid://bl6tjmwugpiq5" path="res://Scenes/hasina.gd" id="1_lssrn"]
+
+[node name="Hasina" type="Area2D" unique_id=1035259749]
+collision_layer = 16
+collision_mask = 9
+script = ExtResource("1_lssrn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2017530073]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_58bsc")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1312445725]
+scale = Vector2(0.4, 0.4)
+polygon = PackedVector2Array(-121, -261, -153, -235, -191, -113, -197, -1, -175, 103, -133, 187, -75, 265, -51, 265, -3, 229, 69, 201, 117, 163, 165, 113, 165, 81, 161, 43, 193, -21, 199, -55, 171, -109, 133, -167, 115, -197, 59, -229, 17, -247, -7, -267, -55, -251, -89, -251)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

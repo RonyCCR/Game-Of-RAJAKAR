@@ -1,0 +1,163 @@
+[gd_scene format=3 uid="uid://c630bxhkysr62"]
+
+[ext_resource type="Script" uid="uid://cc0mnam2pbreq" path="res://Scenes/options.gd" id="1_kftxf"]
+[ext_resource type="Texture2D" uid="uid://kx0bb72xm8jv" path="res://Game of RAJAKAR/BG game over.png" id="1_prnvy"]
+[ext_resource type="FontFile" uid="uid://c7kab1ojbgyhe" path="res://Game of RAJAKAR/Urban Block.ttf" id="2_4tmxy"]
+[ext_resource type="AudioStream" uid="uid://dbuvn6md3582w" path="res://Game of RAJAKAR/Audio/sfx_menu_move3.wav" id="4_663nc"]
+[ext_resource type="FontFile" uid="uid://peln6ku45v7i" path="res://Game of RAJAKAR/MotionControl-Bold.otf" id="4_hvj8k"]
+[ext_resource type="AudioStream" uid="uid://30wd37xdkxmn" path="res://Game of RAJAKAR/Audio/wooden-perc-hit_G#_major.wav" id="5_hvj8k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mqv2n"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7gk1p"]
+content_margin_top = 8.0
+bg_color = Color(1, 0.5568628, 0.09411765, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hmepo"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hx42y"]
+bg_color = Color(0.8595102, 0.50005794, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_38txh"]
+bg_color = Color(1, 0.5568628, 0.09411765, 1)
+border_width_top = 5
+border_color = Color(1, 0.5568628, 0.09411765, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5a0sy"]
+bg_color = Color(0.7607843, 0.40784314, 0, 1)
+border_width_top = 5
+border_color = Color(0.7607843, 0.40784314, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="Options" type="Control" unique_id=1597567264]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kftxf")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1482343252]
+position = Vector2(644, 362.00003)
+scale = Vector2(0.17, 0.17)
+texture = ExtResource("1_prnvy")
+
+[node name="Panel" type="Panel" parent="." unique_id=1795154330]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -305.0
+offset_top = -320.0
+offset_right = 305.0
+offset_bottom = 320.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mqv2n")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel" unique_id=1084618273]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1990121421]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer" unique_id=1545676124]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.003921569, 0.003921569, 0.003921569, 0.7058824)
+theme_override_fonts/font = ExtResource("2_4tmxy")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_7gk1p")
+text = "OPTIONS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Panel/VBoxContainer" unique_id=586986074]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_hvj8k")
+theme_override_font_sizes/font_size = 25
+text = "Sound"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/VBoxContainer" unique_id=1547352096]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_right = 50
+
+[node name="HSlider" type="HSlider" parent="Panel/VBoxContainer/MarginContainer" unique_id=332947593]
+layout_mode = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_hmepo")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_hx42y")
+
+[node name="Label3" type="Label" parent="Panel/VBoxContainer" unique_id=1544920791]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_hvj8k")
+theme_override_font_sizes/font_size = 25
+text = "Options will be available soon."
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="MarginContainer15" type="MarginContainer" parent="Panel/VBoxContainer" unique_id=1020780339]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 482
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 70
+
+[node name="Button" type="Button" parent="Panel/VBoxContainer/MarginContainer15" unique_id=253345840]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_4tmxy")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_38txh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5a0sy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5a0sy")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_5a0sy")
+text = "BACK"
+
+[node name="HoverSound" type="AudioStreamPlayer2D" parent="." unique_id=1030631620]
+position = Vector2(968, 471)
+stream = ExtResource("4_663nc")
+bus = &"SFX"
+
+[node name="ClickSound" type="AudioStreamPlayer2D" parent="." unique_id=2044787892]
+process_mode = 3
+stream = ExtResource("5_hvj8k")
+volume_db = 15.0
+bus = &"SFX"
+
+[connection signal="focus_entered" from="Panel/VBoxContainer/MarginContainer15/Button" to="." method="_on_button_focus_entered"]
+[connection signal="mouse_entered" from="Panel/VBoxContainer/MarginContainer15/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="pressed" from="Panel/VBoxContainer/MarginContainer15/Button" to="." method="_on_button_pressed"]

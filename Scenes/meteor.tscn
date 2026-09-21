@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cyqqgordmh7pa"]
+
+[ext_resource type="Script" uid="uid://bg5byi1nmovea" path="res://Scenes/meteor.gd" id="1_wm1ig"]
+[ext_resource type="Texture2D" uid="uid://cvpicmfhgl2hb" path="res://Game of RAJAKAR/1.png" id="2_wm1ig"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mqv2n"]
+radius = 31.0
+height = 74.0
+
+[node name="Meteor" type="Area2D" unique_id=1826099033]
+collision_layer = 2
+collision_mask = 9
+script = ExtResource("1_wm1ig")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=281032376]
+scale = Vector2(0.29, 0.29)
+texture = ExtResource("2_wm1ig")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=126790316]
+position = Vector2(-1, 0)
+shape = SubResource("CapsuleShape2D_mqv2n")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

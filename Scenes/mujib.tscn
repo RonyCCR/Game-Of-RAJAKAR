@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dsgbakd6wjme1"]
+
+[ext_resource type="Script" uid="uid://dqreymf3g13yv" path="res://Scenes/mujib.gd" id="1_o7mw3"]
+[ext_resource type="Texture2D" uid="uid://b86bvnb3a0ou6" path="res://Game of RAJAKAR/Mujib.png" id="2_jpg65"]
+
+[node name="Mujib" type="Area2D" unique_id=926134255]
+collision_layer = 64
+collision_mask = 9
+script = ExtResource("1_o7mw3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=980946319]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_jpg65")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1388317294]
+polygon = PackedVector2Array(4, -66, 24, -60, 38, -50, 48, -37, 51, -27, 50, -13, 47, -5, 48, -1, 46, 10, 41, 25, 37, 29, 32, 29, 31, 27, 26, 41, 17, 52, 1, 62, -10, 67, -26, 64, -36, 54, -43, 40, -48, 23, -47, 18, -51, 13, -48, 3, -51, -7, -47, -19, -45, -29, -46, -39, -41, -49, -30, -58, -16, -65)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

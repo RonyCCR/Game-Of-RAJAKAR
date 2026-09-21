@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dke6cjipuluc8"
+path="res://.godot/imported/Untitled Session 1_mixdown.wav-3979f1563bee7e6056060bc3f8dd9f3a.sample"
+
+[deps]
+
+source_file="res://Game of RAJAKAR/Audio/Untitled Session 1_mixdown.wav"
+dest_files=["res://.godot/imported/Untitled Session 1_mixdown.wav-3979f1563bee7e6056060bc3f8dd9f3a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://h5awh74k7677"]
+
+[ext_resource type="Script" uid="uid://14fypwj36qgr" path="res://Scenes/laser.gd" id="1_mou6w"]
+[ext_resource type="Texture2D" uid="uid://cgt012bdo64he" path="res://Game of RAJAKAR/Fire-01.png" id="2_mou6w"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7gk1p"]
+radius = 1.0
+height = 12.0
+
+[node name="Laser" type="Area2D" unique_id=312281715]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_mou6w")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=126836434]
+scale = Vector2(0.045, 0.045)
+texture = ExtResource("2_mou6w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1467153818]
+shape = SubResource("CapsuleShape2D_7gk1p")

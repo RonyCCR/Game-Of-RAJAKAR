@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://dn1vdyt00eyk8"]
+
+[ext_resource type="Script" uid="uid://8uv4esc4o2pv" path="res://Scenes/ui.gd" id="1_qdvrb"]
+[ext_resource type="FontFile" uid="uid://c7kab1ojbgyhe" path="res://Game of RAJAKAR/Urban Block.ttf" id="2_qdvrb"]
+
+[node name="UI" type="CanvasLayer" unique_id=585196958 groups=["ui"]]
+script = ExtResource("1_qdvrb")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=201678987]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -639.0
+offset_right = 639.0
+offset_bottom = 41.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1229005260]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 81
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer" unique_id=2118572683]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 0.5568628, 0.09411765, 1)
+theme_override_fonts/font = ExtResource("2_qdvrb")
+theme_override_font_sizes/font_size = 30
+text = "Time Survived: "
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer" unique_id=433356240]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 0.5568628, 0.09411765, 1)
+theme_override_fonts/font = ExtResource("2_qdvrb")
+theme_override_font_sizes/font_size = 30
+text = "KILLED: "
+horizontal_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="." unique_id=1923028465]
+anchors_preset = -1
+anchor_top = 0.89300007
+anchor_bottom = 0.89300007
+offset_left = 14.999999
+offset_top = 34.039978
+offset_right = 691.0
+offset_bottom = 162.03998
+grow_vertical = 0
+scale = Vector2(0.25, 0.25)
+theme_override_constants/margin_left = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer2" unique_id=2008160938]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 30
+
+[node name="Timer" type="Timer" parent="." unique_id=187922920]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

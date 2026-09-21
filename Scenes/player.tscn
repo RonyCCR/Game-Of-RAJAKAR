@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://wps0hpecyxnr"]
+
+[ext_resource type="Script" uid="uid://okioub41sr24" path="res://Scenes/player.gd" id="1_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://b3f73c6nemh6h" path="res://Game of RAJAKAR/Player-01.png" id="2_cvnsp"]
+[ext_resource type="AudioStream" uid="uid://l1i2atmnopb8" path="res://Game of RAJAKAR/Audio/sfx_sounds_error15.wav" id="3_6t5aa"]
+[ext_resource type="AudioStream" uid="uid://by2xego5cqw7k" path="res://Game of RAJAKAR/Audio/sfx_sounds_impact2.wav" id="4_vgqql"]
+
+[node name="Player" type="CharacterBody2D" unique_id=91380736]
+collision_mask = 6
+script = ExtResource("1_cvnsp")
+
+[node name="PlayerImage" type="Sprite2D" parent="." unique_id=127846435]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_cvnsp")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1771326517]
+polygon = PackedVector2Array(7, -56, 20, -26, 33, -12, 40, -6, 53, -8, 57, -28, 62, -29, 66, -7, 66, 11, 61, 28, 56, 29, 53, 18, 33, 33, 33, 47, 26, 42, 22, 51, 15, 56, 13, 44, 6, 49, -7, 48, -12, 42, -15, 56, -23, 50, -25, 40, -33, 46, -33, 32, -53, 18, -56, 30, -64, 23, -67, 3, -65, -14, -63, -27, -58, -29, -52, -8, -41, -6, -30, -14, -26, -17, -19, -23, -6, -56)
+
+[node name="LaserPosition" type="Marker2D" parent="." unique_id=606302604]
+position = Vector2(0, -35)
+
+[node name="LaserPosition2" type="Marker2D" parent="." unique_id=996563493]
+position = Vector2(60, -23)
+
+[node name="LaserPosition3" type="Marker2D" parent="." unique_id=991067337]
+position = Vector2(-60, -23)
+
+[node name="LaserTimer" type="Timer" parent="." unique_id=1963240468]
+wait_time = 0.5
+one_shot = true
+
+[node name="DamageSound" type="AudioStreamPlayer2D" parent="." unique_id=1541243907]
+stream = ExtResource("3_6t5aa")
+
+[node name="LaserSound" type="AudioStreamPlayer2D" parent="." unique_id=938580999]
+stream = ExtResource("4_vgqql")
+volume_db = -3.0
+
+[connection signal="laser" from="." to="." method="_on_laser"]
+[connection signal="timeout" from="LaserTimer" to="." method="_on_laser_timer_timeout"]

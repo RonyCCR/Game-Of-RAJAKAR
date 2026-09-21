@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dbuvn6md3582w"
+path="res://.godot/imported/sfx_menu_move3.wav-c5506fd89672696bf41dd1f1a246bdc0.sample"
+
+[deps]
+
+source_file="res://Game of RAJAKAR/Audio/sfx_menu_move3.wav"
+dest_files=["res://.godot/imported/sfx_menu_move3.wav-c5506fd89672696bf41dd1f1a246bdc0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
